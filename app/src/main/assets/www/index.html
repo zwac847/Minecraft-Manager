@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Üst Bar -->
+        <header class="header">
+            <div class="logo">
+                <span class="logo-z">Z</span>
+                <span class="logo-title">MC MANAGER</span>
+            </div>
+            <button id="btnLaunchMC" class="btn-mc-launch">
+                🎮 Minecraft'ı Başlat
+            </button>
+        </header>
+
+        <!-- Sekme Düğmeleri -->
+        <nav class="tabs">
+            <button class="tab-btn active" data-tab="mods">📦 Modlar (BP)</button>
+            <button class="tab-btn" data-tab="textures">🎨 Texture (RP)</button>
+            <button class="tab-btn" data-tab="skins">👤 Skinler</button>
+        </nav>
+
+        <!-- İçerik Alanları -->
+        <main class="tab-content">
+            <!-- Modlar Sekmesi -->
+            <section id="tab-mods" class="tab-pane active">
+                <div class="section-header">
+                    <h2>Modlar & Eklentiler (.mcaddon / .mcpack)</h2>
+                    <label class="file-upload-btn">
+                        ➕ Yeni Mod Yükle
+                        <input type="file" id="inputMod" accept=".mcpack,.mcaddon,.zip">
+                    </label>
+                </div>
+                <div id="modList" class="pack-grid"></div>
+            </section>
+
+            <!-- Texture Pack Sekmesi -->
+            <section id="tab-textures" class="tab-pane">
+                <div class="section-header">
+                    <h2>Kaynak Paketleri / Texture Pack</h2>
+                    <label class="file-upload-btn">
+                        🎨 Texture Yükle
+                        <input type="file" id="inputTexture" accept=".mcpack,.zip">
+                    </label>
+                </div>
+                <div id="textureList" class="pack-grid"></div>
+            </section>
+
+            <!-- Skin Sekmesi -->
+            <section id="tab-skins" class="tab-pane">
+                <div class="section-header">
+                    <h2>Skin Yöneticisi & Dönüştürücü</h2>
+                    <label class="file-upload-btn">
+                        🖼️ Skin Yükle (.png)
+                        <input type="file" id="inputSkin" accept="image/png">
+                    </label>
+                </div>
+                <div id="skinList" class="pack-grid"></div>
+            </section>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
