@@ -32,8 +32,8 @@ jobs:
       - name: Create Release
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: v1.0.0
-          name: Minecraft Manager v1.0.0
+          tag_name: v1.0.${{ github.run_number }}
+          name: Minecraft Manager v1.0.${{ github.run_number }}
           body: |
             Minecraft Mod, Skin ve Texture Pack Yöneticisi APK
             - Mod (.mcaddon / .mcpack) Yükleme & Yönetimi
